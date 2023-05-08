@@ -1,4 +1,6 @@
-import Header from "./features/global/header";
+import DashBoard from "./features/dashboard";
+import Header from "./features/global/Header";
+import { Routes, Route } from "react-router-dom";
 import { ColorModeContext, useMode } from "./theme"
 import { CssBaseline, ThemeProvider } from "@mui/material"
 
@@ -9,7 +11,14 @@ const App = () => {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Header />
+        <div className="app">
+          <main className="content">
+            <Header />
+            <Routes>
+              <Route path="/" element={<DashBoard />} />
+            </Routes>
+          </main>
+        </div>
       </ThemeProvider>
     </ColorModeContext.Provider>
     )
