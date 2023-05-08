@@ -1,9 +1,18 @@
+import Header from "./features/global/header";
+import { ColorModeContext, useMode } from "./theme"
+import { CssBaseline, ThemeProvider } from "@mui/material"
+
 const App = () => {
+  const [theme, colorMode] = useMode();
+
   return(
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  )
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Header />
+      </ThemeProvider>
+    </ColorModeContext.Provider>
+    )
 }
 
 export default App
