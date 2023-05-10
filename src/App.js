@@ -4,6 +4,7 @@ import Sidebar from "./features/global/Sidebar";
 import Team from "./features/team";
 import Contacts from "./features/contacts";
 import Invoices from "./features/invoices";
+import Form from "./features/form"
 import { Routes, Route } from "react-router-dom";
 import { ColorModeContext, useMode } from "./theme"
 import { CssBaseline, ThemeProvider } from "@mui/material"
@@ -26,6 +27,7 @@ const App = () => {
               <Route path="/team" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/invoices" element={<Invoices />} />
+              <Route path="/form" element={<Form />} />
             </Routes>
           </main>
         </div>
