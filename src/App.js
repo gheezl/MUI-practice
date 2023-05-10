@@ -2,6 +2,7 @@ import DashBoard from "./features/dashboard";
 import Header from "./features/global/Header";
 import Sidebar from "./features/global/Sidebar";
 import Team from "./features/team";
+import Contacts from "./features/contacts";
 import { Routes, Route } from "react-router-dom";
 import { ColorModeContext, useMode } from "./theme"
 import { CssBaseline, ThemeProvider } from "@mui/material"
@@ -22,6 +23,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<DashBoard />} />
               <Route path="/team" element={<Team />} />
+              <Route path="/contacts" element={<Contacts />} />
             </Routes>
           </main>
         </div>
