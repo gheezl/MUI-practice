@@ -1,6 +1,6 @@
 import { Box, Typography, useTheme } from '@mui/material';
-import { ProSidebarProvider, Menu, MenuItem } from "react-pro-sidebar";
-// import 'react-pro-sidebar/dist/css/styles.css'
+import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
+import 'react-pro-sidebar/dist/css/styles.css'
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
 import { 
@@ -43,7 +43,7 @@ const Sidebar = () => {
                 color: "#6870fa !important",
             },
         }} >
-            <ProSidebarProvider collapsed={isCollapsed}>
+            <ProSidebar collapsed={isCollapsed}>
                 <Menu>
                     <MenuItem
                         onClick={() => setIsCollapsed(!isCollapsed)}
@@ -64,28 +64,29 @@ const Sidebar = () => {
                                     >
                                         <Typography>ADMINS</Typography>
                                     </Box>   
-                                    {/* user */}
-                                    <Box>
-                                        <img 
-                                            alt='profile-user'
-                                            width="100px"
-                                            height="100px"
-                                            src={'../../assets/user.png'}
-                                            style={{ curser: "pointer", borderRadius: "50%"}}
-                                        />
-                                    </Box> 
-                                    <Box>
-                                        <Typography variant='h2' color={colors.grey[100]} fontWeight="bold" margin="10px 0 0 0">Jacob Rushlow</Typography>
-                                        <Typography variant='h5' color={colors.greenAccent[500]} >VP Fancy Admin</Typography>
-                                    </Box>
                                 </Fragment>
                                 
                             )
                             : null
                         }
                     </MenuItem>
+
+                    {/* user */}
+                    <Box>
+                        <img 
+                            alt='profile-user'
+                            width="100px"
+                            height="100px"
+                            src={'../../assets/user.png'}
+                            style={{ curser: "pointer", borderRadius: "50%"}}
+                        />
+                    </Box> 
+                    <Box>
+                        <Typography variant='h2' color={colors.grey[100]} fontWeight="bold" margin="10px 0 0 0">Jacob Rushlow</Typography>
+                        <Typography variant='h5' color={colors.greenAccent[500]} >VP Fancy Admin</Typography>
+                    </Box>
                 </Menu>
-            </ProSidebarProvider>
+            </ProSidebar>
         </Box>
     )
 }
