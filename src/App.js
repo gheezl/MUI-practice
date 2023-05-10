@@ -1,6 +1,7 @@
 import DashBoard from "./features/dashboard";
 import Header from "./features/global/Header";
 import Sidebar from "./features/global/Sidebar";
+import Team from "./features/team";
 import { Routes, Route } from "react-router-dom";
 import { ColorModeContext, useMode } from "./theme"
 import { CssBaseline, ThemeProvider } from "@mui/material"
@@ -15,11 +16,12 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
+          <Sidebar isSidebar={isSidebar} />
           <main className="content">
-            <Sidebar isSidebar={isSidebar} />
             <Header />
             <Routes>
               <Route path="/" element={<DashBoard />} />
+              <Route path="/team" element={<Team />} />
             </Routes>
           </main>
         </div>
