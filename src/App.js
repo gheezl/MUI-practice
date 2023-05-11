@@ -1,10 +1,11 @@
 import DashBoard from "./features/dashboard";
-import Header from "./features/global/Header";
+import Topbar from "./features/global/Topbar";
 import Sidebar from "./features/global/Sidebar";
 import Team from "./features/team";
 import Contacts from "./features/contacts";
 import Invoices from "./features/invoices";
 import Form from "./features/form"
+import Calendar from "./features/calendar";
 import { Routes, Route } from "react-router-dom";
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -21,13 +22,14 @@ const App = () => {
         <div className="app">
           <Sidebar isSidebar={isSidebar} />
           <main className="content">
-            <Header />
+            <Topbar />
             <Routes>
               <Route path="/" element={<DashBoard />} />
               <Route path="/team" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/invoices" element={<Invoices />} />
               <Route path="/form" element={<Form />} />
+              <Route path="/calendar" element={<Calendar />} />
             </Routes>
           </main>
         </div>

@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
 import { PersonOutline, NotificationsOutlined, DarkModeOutlined, LightModeOutlined, Search, SettingsOutlined } from "@mui/icons-material";
 
-const Header = () => {
+const Topbar = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const colorMode = useContext(ColorModeContext);
@@ -34,4 +34,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default Topbar;
