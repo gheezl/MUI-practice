@@ -14,6 +14,14 @@ const Calendar = () => {
     const colors = tokens(theme.palette.mode);
     const [currentEvents, setCurrentEvents] = useState([]);
 
+    const handleDateClick = () => {
+        //nothing LOL
+    }
+
+    const handleEventClick = () => {
+        //nothing again LOLOLOLOL
+    }
+
     return (
         <Box margin="20px" >
             <Header title="CALENDAR" subtitle="Full Calendar Interactive Page" />
@@ -45,6 +53,34 @@ const Calendar = () => {
                             ))
                         }
                     </List>
+                </Box>
+                <Box flex="1 1 100%" ml="15px">
+                    <FullCalendar 
+                        height="75vh"
+                        plugins={{
+                            dayGridPlugin,
+                            timeGridPlugin,
+                            interactionPlugin,
+                            listPlugin
+                        }}
+                        headerToolbar={{
+                            left: "prev, next today",
+                            center: "title",
+                            right: "dayGridMonth, timeGridWeek, timeGridDay, listmonth"
+                        }}
+                        initialView="dayGridMonth"
+                        editable={true}
+                        selectable={true}
+                        selectMirror={true}
+                        dayMaxEvents={true}
+                        select={handleDateClick}
+                        eventClick={handleEventClick}
+                        eventsSet={events => setCurrentEvents(events)}
+                        initialEvents={[
+                            {id: "1234", title: "All-day event", date: "2022-09-14"},
+                            {id: "4321", title: "Timed event", date: "2022-09-14"}
+                        ]}
+                    />
                 </Box>
             </Box>
         </Box>
