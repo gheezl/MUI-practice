@@ -6,8 +6,8 @@ import Contacts from "./features/contacts";
 import Invoices from "./features/invoices";
 import Form from "./features/form"
 import { Routes, Route } from "react-router-dom";
-import { ColorModeContext, useMode } from "./theme"
-import { CssBaseline, ThemeProvider } from "@mui/material"
+import { ColorModeContext, useMode } from "./theme";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import { useState } from "react";
 
 const App = () => {
