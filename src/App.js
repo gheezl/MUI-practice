@@ -6,6 +6,7 @@ import Contacts from "./features/contacts";
 import Invoices from "./features/invoices";
 import Form from "./features/form"
 import Calendar from "./features/calendar";
+import Faq from "./features/faq";
 import { Routes, Route } from "react-router-dom";
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -30,6 +31,7 @@ const App = () => {
               <Route path="/invoices" element={<Invoices />} />
               <Route path="/form" element={<Form />} />
               <Route path="/calendar" element={<Calendar />} />
+              <Route path="/faq" element={<Faq />} />
             </Routes>
           </main>
         </div>
