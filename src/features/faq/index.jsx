@@ -7,7 +7,7 @@ import { tokens } from "../../theme";
 import { useState } from "react";
 
 const Faq = () => {
-    const [questions, setQuestions] = useState([
+    const [questions] = useState([
         {title: "An Important Question", details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."},
         {title: "Another Important Question", details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."},
         {title: "A Third Important Question", details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."},
@@ -16,9 +16,6 @@ const Faq = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     // eslint-disable-next-line no-console
-    const addQuestion = (question) => {
-        setQuestions(questions.push(question))
-    }
 
     return (
         <Box margin="20px" >
