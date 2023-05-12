@@ -7,7 +7,7 @@ import GeoChart from "../../components/GeoChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
-import { DownloadOutlined, EmailIcon, PointOfSale, PersonAdd, TrafficIcon } from "@mui/icons-material";
+import { DownloadOutlined, Email, PointOfSale, PersonAdd, Traffic } from "@mui/icons-material";
 
 const DashBoard = () => {
     const theme = useTheme();
@@ -28,7 +28,7 @@ const DashBoard = () => {
             </Box>
             <Box
                 display="grid"
-                gridTemplateColumns="repeate(12, 1fr)"
+                gridTemplateColumns="repeat(12, 1fr)"
                 gridAutoRows="140px"
                 gap="20px"
             >
@@ -45,7 +45,7 @@ const DashBoard = () => {
                         progress="0.75"
                         increase="+14%"
                         icon={
-                            <EmailIcon sx={{color: colors.greenAccent[600], fontSize: "26px"}} />
+                            <Email sx={{color: colors.greenAccent[600], fontSize: "26px"}} />
                         }                    
                     />
                 </Box>

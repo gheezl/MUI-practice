@@ -14,7 +14,7 @@ const Topbar = () => {
                 <InputBase sx={{marginLeft: 2, flex: 1}} placeholder="search" />
                 <IconButton type="button" sx={{padding: 1}} >
                     <Search />
-                </IconButton>
+                                      </IconButton>
             </Box>
             <Box display="flex">
                 <IconButton onClick={colorMode.toggleColorMode}>

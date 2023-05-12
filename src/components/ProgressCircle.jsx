@@ -1,10 +1,9 @@
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import { tokens } from "../theme"
-import { useTheme } from "@emotion/react";
 
 const ProgressCircle = ({progress = "0.75", size = "40"}) => {
     const theme = useTheme();
-    const colors = tokens(theme.pallete.mode);
+    const colors = tokens(theme.palette.mode);
     const angle = progress * 360;
     
     return (
@@ -16,9 +15,7 @@ const ProgressCircle = ({progress = "0.75", size = "40"}) => {
             width: `${size}px`,
             height: `${size}px`,
           }}
-        >
-            
-        </Box>
+        />
     )
 }
 
