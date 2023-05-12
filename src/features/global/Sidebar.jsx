@@ -5,23 +5,19 @@ import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
 import { 
     HomeOutlined, 
-    PeopleOutlined,
     ContactsOutlined,
     ReceiptOutlined,
     PersonOutlined,
     CalendarTodayOutlined,
-    HelpOutlined,
     BarChartOutlined,
-    PieChartOutlined,
     TimelineOutlined,
     MenuOutlined,
     MapOutlined,
-    PersonPinCircleoutlined,
-    HelpOutlineOutlined,
     PieChartOutlineOutlined,
-    PersonPinCircleOutlined
+    PersonPinCircleOutlined,
+    HelpOutlineOutlined
 } from '@mui/icons-material';
-import { useState, Fragment } from 'react';
+import { useState} from 'react';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
     const theme = useTheme();

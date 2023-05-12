@@ -18,14 +18,13 @@ import { useState } from "react";
 
 const App = () => {
   const [theme, colorMode] = useMode();
-  const [isSidebar, setIsSidebar] = useState(true);
 
   return(
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-          <Sidebar isSidebar={isSidebar} />
+          <Sidebar  />
           <main className="content">
             <Topbar />
             <Routes>

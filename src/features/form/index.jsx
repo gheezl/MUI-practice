@@ -6,7 +6,9 @@ import { useState } from "react";
 
 const Form = () => {
     const isNonMobile = useMediaQuery("(min-width:600px)")
+    // eslint-disable-next-line no-console
     const [phoneRegExp, setPhoneRegExp] = useState(/^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/);
+    // eslint-disable-next-line no-console
     const [initialValues, setInitialValues] = useState({
         firstName: "",
         lastName: "",
@@ -15,6 +17,7 @@ const Form = () => {
         address1: "",
         address2: ""
     });
+    // eslint-disable-next-line no-console
     const [userSchema, setUserSchema] = useState(yup.object().shape({
         firstName: yup.string().required("required"),
         lastName: yup.string().required("required"),

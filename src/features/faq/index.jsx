@@ -15,6 +15,10 @@ const Faq = () => {
     ])
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    // eslint-disable-next-line no-console
+    const addQuestion = (question) => {
+        setQuestions(questions.push(question))
+    }
 
     return (
         <Box margin="20px" >
