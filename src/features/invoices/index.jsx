@@ -6,6 +6,7 @@ import Header from "../../components/Header";
 
 const Invoices = () => {
   const theme = useTheme();
+  console.log(theme.palette)
   const colors = tokens(theme.palette.mode);
   const columns = [
     { field: "id", headerName: "ID" },
@@ -26,13 +27,14 @@ const Invoices = () => {
       flex: 1,
     },
     {
-        field: "cost",
-        headerName: "Cost",
-        flex: 1,
-        renderCell: (params) => {
-            return (
-              <Typography>${params.row.cost}</Typography>
-            )},
+      field: "cost",
+      headerName: "Cost",
+      flex: 1,
+      renderCell: (params) => {
+        return (
+          <Typography>${params.row.cost}</Typography>
+        )
+      },
     }
   ];
 
